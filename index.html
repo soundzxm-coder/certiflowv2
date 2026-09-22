@@ -35,10 +35,11 @@ nav{background:#fff;border-bottom:1px solid #E2E2E2;height:52px;display:flex;ali
 .btn-so{padding:5px 12px;border:1px solid #E2E2E2;border-radius:6px;background:#fff;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;cursor:pointer;}
 
 /* AUTH */
-#auth-page{min-height:calc(100vh - 56px);display:none;align-items:center;justify-content:center;background:#0A0A0A;padding:1rem;}
-#auth-page.active{display:flex!important;}
-.page{display:none;}
-.page.active{display:block;}
+#auth-page{min-height:calc(100vh - 56px);background:#0A0A0A;padding:1rem;align-items:center;justify-content:center;}
+#dash-page{min-height:calc(100vh - 56px);}
+.hidden{display:none!important;}
+.flex-center{display:flex!important;}
+.block-show{display:block!important;}
 .auth-card{background:#fff;border-radius:16px;padding:2.5rem;width:100%;max-width:380px;box-shadow:0 8px 40px rgba(0,0,0,.25);}
 .auth-card h2{font-size:22px;font-weight:800;letter-spacing:-.03em;margin-bottom:6px;}
 .auth-card p{font-size:13px;color:#767676;margin-bottom:1.5rem;}
@@ -261,7 +262,7 @@ textarea:focus{border-color:#007A4D;box-shadow:0 0 0 3px rgba(0,122,77,.1);}
 </nav>
 
 <!-- AUTH -->
-<div id="auth-page">
+<div id="auth-page" class="flex-center">
   <div class="auth-card">
     <h2>Welcome to Certiflow</h2>
     <p>Sign in to manage your Z83 application.</p>
@@ -290,7 +291,7 @@ textarea:focus{border-color:#007A4D;box-shadow:0 0 0 3px rgba(0,122,77,.1);}
 </div>
 
 <!-- DASHBOARD -->
-<div class="page" id="dash-page">
+<div id="dash-page" class="hidden">
   <div class="dash-top">
     <h2 id="dash-greeting">Hi there 👋</h2>
     <p id="dash-sub">Welcome to your Certiflow dashboard.</p>
@@ -306,7 +307,7 @@ textarea:focus{border-color:#007A4D;box-shadow:0 0 0 3px rgba(0,122,77,.1);}
   <div class="dash-body">
 
     <!-- HOME -->
-    <div class="panel active" id="panel-home">
+    <div class="panel" id="panel-home" style="display:block">
       <div class="home-grid">
         <div class="home-card live" onclick="showPanel('verify',document.querySelectorAll('.dnav-btn')[1])">
           <div class="hc-icon">✅</div><h4>Verification</h4><p>Validate SA ID numbers instantly</p>
@@ -501,8 +502,17 @@ const sb = supabase.createClient(
 const st = { user: null, role: 'user', files: [], currentBundle: null };
 
 /* ── PAGE CONTROL ── */
-function showAuth() { document.getElementById('auth-page').classList.add('active'); document.getElementById('dash-page').classList.remove('active'); }
-function showDash() { document.getElementById('auth-page').classList.remove('active'); document.getElementById('dash-page').classList.add('active'); }
+function showAuth() {
+  document.getElementById('auth-page').classList.remove('hidden');
+  document.getElementById('auth-page').classList.add('flex-center');
+  document.getElementById('dash-page').classList.add('hidden');
+}
+function showDash() {
+  document.getElementById('auth-page').classList.add('hidden');
+  document.getElementById('auth-page').classList.remove('flex-center');
+  document.getElementById('dash-page').classList.remove('hidden');
+  document.getElementById('dash-page').classList.add('block-show');
+}
 
 function showPanel(name, btn) {
   document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
