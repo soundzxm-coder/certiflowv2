@@ -11,17 +11,21 @@ body{font-family:'Inter',sans-serif;background:#F5F5F5;color:#0A0A0A;min-height:
 .flag{display:flex;height:4px;}
 .flag span{flex:1;}
 nav{background:#fff;border-bottom:1px solid #E2E2E2;height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;position:sticky;top:0;z-index:100;}
-.wm{font-size:18px;font-weight:800;letter-spacing:-.04em;color:#0A0A0A;text-decoration:none;}
+.wm{font-size:18px;font-weight:800;letter-spacing:-.04em;color:#0A0A0A;}
 .wm em{font-style:normal;color:#007A4D;}
-.nav-user{display:none;align-items:center;gap:12px;font-size:13px;color:#767676;}
+.nav-user{display:none;align-items:center;gap:12px;font-size:13px;}
 .nav-user span{font-weight:600;color:#0A0A0A;}
-.btn-so{padding:5px 12px;border:1px solid #E2E2E2;border-radius:6px;background:#fff;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;cursor:pointer;color:#0A0A0A;}
-.page{display:none;}
-.page.active{display:block;}
+.nav-role{font-size:10px;font-weight:700;padding:2px 8px;border-radius:40px;text-transform:uppercase;letter-spacing:.05em;}
+.role-lawyer{background:#E6F4EE;color:#007A4D;}
+.role-admin{background:#002395;color:#fff;}
+.role-user{background:#F5F5F5;color:#767676;}
+.btn-so{padding:5px 12px;border:1px solid #E2E2E2;border-radius:6px;background:#fff;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;cursor:pointer;}
 
-/* ── AUTH ── */
+/* AUTH */
 #auth-page{min-height:calc(100vh - 56px);display:none;align-items:center;justify-content:center;background:#0A0A0A;}
 #auth-page.active{display:flex;}
+.page{display:none;}
+.page.active{display:block;}
 .auth-card{background:#fff;border-radius:16px;padding:2.5rem;width:100%;max-width:380px;box-shadow:0 8px 40px rgba(0,0,0,.25);}
 .auth-card h2{font-size:22px;font-weight:800;letter-spacing:-.03em;margin-bottom:6px;}
 .auth-card p{font-size:13px;color:#767676;margin-bottom:1.5rem;}
@@ -32,18 +36,17 @@ nav{background:#fff;border-bottom:1px solid #E2E2E2;height:52px;display:flex;ali
 .or-div span{font-size:11px;color:#767676;}
 .or-div::before,.or-div::after{content:'';flex:1;height:1px;background:#E2E2E2;}
 .tab-row{display:flex;border-bottom:1px solid #E2E2E2;margin-bottom:1.25rem;}
-.tab-btn{flex:1;padding:9px;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;border:none;background:none;color:#767676;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color .15s,border-color .15s;}
+.tab-btn{flex:1;padding:9px;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;border:none;background:none;color:#767676;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;}
 .tab-btn.active{color:#0A0A0A;border-bottom-color:#007A4D;}
 .fld{margin-bottom:12px;}
 .fld label{display:block;font-size:11px;font-weight:600;color:#767676;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;}
-.fld input{width:100%;padding:10px 12px;border:1px solid #E2E2E2;border-radius:8px;font-family:'Inter',sans-serif;font-size:14px;color:#0A0A0A;outline:none;transition:border-color .15s;}
-.fld input:focus{border-color:#007A4D;box-shadow:0 0 0 3px rgba(0,122,77,.1);}
+.fld input,.fld select{width:100%;padding:10px 12px;border:1px solid #E2E2E2;border-radius:8px;font-family:'Inter',sans-serif;font-size:14px;color:#0A0A0A;outline:none;transition:border-color .15s;}
+.fld input:focus,.fld select:focus{border-color:#007A4D;box-shadow:0 0 0 3px rgba(0,122,77,.1);}
 .btn-main{width:100%;padding:11px;background:#007A4D;color:#fff;border:none;border-radius:8px;font-family:'Inter',sans-serif;font-size:14px;font-weight:700;cursor:pointer;margin-top:4px;transition:background .15s;}
 .btn-main:hover{background:#005e3b;}
 #form-signup{display:none;}
-.auth-foot{font-size:11px;color:#767676;text-align:center;margin-top:1.25rem;}
 
-/* ── DASHBOARD ── */
+/* DASH */
 #dash-page{min-height:calc(100vh - 56px);}
 .dash-top{background:#fff;border-bottom:1px solid #E2E2E2;padding:1.5rem 2rem;}
 .dash-top h2{font-size:22px;font-weight:800;letter-spacing:-.04em;margin-bottom:3px;}
@@ -55,7 +58,7 @@ nav{background:#fff;border-bottom:1px solid #E2E2E2;height:52px;display:flex;ali
 .panel{display:none;}
 .panel.active{display:block;}
 
-/* ── CARDS ── */
+/* CARDS */
 .card{background:#fff;border:1px solid #E2E2E2;border-radius:12px;overflow:hidden;margin-bottom:14px;}
 .card-head{padding:12px 16px;border-bottom:1px solid #E2E2E2;display:flex;align-items:center;justify-content:space-between;}
 .card-head h3{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;}
@@ -64,51 +67,31 @@ nav{background:#fff;border-bottom:1px solid #E2E2E2;height:52px;display:flex;ali
 .p-g{background:#E6F4EE;color:#007A4D;}
 .p-y{background:#FFF8E6;color:#8a6500;}
 .p-r{background:#FDECEA;color:#7a1a1a;}
+.p-b{background:#E6E9F7;color:#002395;}
 .p-d{background:#F5F5F5;color:#767676;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media(max-width:700px){.two-col{grid-template-columns:1fr;}}
 
-/* ── VERIFICATION ── */
+/* BUTTONS */
+.btn-green{padding:8px 16px;background:#007A4D;color:#fff;border:none;border-radius:8px;font-family:'Inter',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:background .15s;}
+.btn-green:hover{background:#005e3b;}
+.btn-outline{padding:8px 16px;background:#fff;color:#0A0A0A;border:1px solid #E2E2E2;border-radius:8px;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;cursor:pointer;}
+.btn-black{padding:8px 16px;background:#0A0A0A;color:#fff;border:none;border-radius:8px;font-family:'Inter',sans-serif;font-size:13px;font-weight:700;cursor:pointer;}
+.btn-red{padding:8px 16px;background:#DE3831;color:#fff;border:none;border-radius:8px;font-family:'Inter',sans-serif;font-size:13px;font-weight:700;cursor:pointer;}
+
+/* ID VERIFICATION */
 .id-input-wrap{display:flex;gap:8px;margin-bottom:12px;}
-.id-input-wrap input{flex:1;padding:10px 12px;border:1px solid #E2E2E2;border-radius:8px;font-family:'Inter',sans-serif;font-size:14px;color:#0A0A0A;outline:none;transition:border-color .15s;}
+.id-input-wrap input{flex:1;padding:10px 12px;border:1px solid #E2E2E2;border-radius:8px;font-family:'Inter',sans-serif;font-size:14px;outline:none;}
 .id-input-wrap input:focus{border-color:#007A4D;}
-.btn-check{padding:10px 18px;background:#007A4D;color:#fff;border:none;border-radius:8px;font-family:'Inter',sans-serif;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;transition:background .15s;}
-.btn-check:hover{background:#005e3b;}
 .id-result{padding:14px;border-radius:8px;font-size:13px;line-height:1.6;display:none;}
 .id-result.valid{background:#E6F4EE;border:1px solid rgba(0,122,77,.2);color:#005038;}
 .id-result.invalid{background:#FDECEA;border:1px solid rgba(222,56,49,.2);color:#7a1a1a;}
-.id-breakdown{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px;}
+.id-breakdown{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px;display:none;}
 .id-field{background:#fff;border:1px solid #E2E2E2;border-radius:8px;padding:10px 12px;}
 .id-field .lbl{font-size:10px;font-weight:600;color:#767676;text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px;}
 .id-field .val{font-size:13px;font-weight:600;color:#0A0A0A;}
-.doc-status-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
-.doc-status-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid #E2E2E2;border-radius:8px;background:#fff;}
-.doc-status-item .ds-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
-.doc-status-item .ds-info{flex:1;}
-.doc-status-item .ds-name{font-size:12px;font-weight:600;color:#0A0A0A;}
-.doc-status-item .ds-status{font-size:11px;color:#767676;}
 
-/* ── ATS ── */
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-@media(max-width:700px){.two-col{grid-template-columns:1fr;}}
-textarea{width:100%;padding:10px 12px;border:1px solid #E2E2E2;border-radius:8px;font-family:'Inter',sans-serif;font-size:13px;color:#0A0A0A;resize:vertical;outline:none;transition:border-color .15s;background:#fff;}
-textarea:focus{border-color:#007A4D;box-shadow:0 0 0 3px rgba(0,122,77,.1);}
-.btn-analyse{padding:10px 24px;background:#007A4D;color:#fff;border:none;border-radius:8px;font-family:'Inter',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:background .15s;}
-.btn-analyse:hover{background:#005e3b;}
-.btn-clear{padding:10px 16px;background:#fff;color:#0A0A0A;border:1px solid #E2E2E2;border-radius:8px;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;cursor:pointer;}
-.ring-wrap{position:relative;width:100px;height:100px;margin:0 auto 12px;}
-.ring-svg{transform:rotate(-90deg);}
-.ring-score{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
-.ring-score .big{font-size:26px;font-weight:800;letter-spacing:-.04em;color:#0A0A0A;}
-.ring-score .sm{font-size:10px;color:#767676;}
-.kw{padding:4px 10px;border-radius:40px;font-size:11px;font-weight:600;display:inline-block;margin:2px;}
-.kw-f{background:#E6F4EE;color:#007A4D;}
-.kw-m{background:#FDECEA;color:#7a1a1a;}
-.sug{display:flex;gap:10px;padding:10px 12px;background:#F5F5F5;border-radius:8px;border-left:3px solid #FFB612;font-size:12px;color:#0A0A0A;margin-bottom:6px;line-height:1.5;}
-.ats-loading{display:none;align-items:center;gap:8px;font-size:13px;color:#767676;padding:8px 0;}
-.ats-loading.show{display:flex;}
-.spinner{width:14px;height:14px;border:2px solid #E2E2E2;border-top-color:#007A4D;border-radius:50%;animation:spin .7s linear infinite;flex-shrink:0;}
-@keyframes spin{to{transform:rotate(360deg);}}
-
-/* ── DOCUMENTS ── */
+/* DOCS */
 .drop-zone{border:1.5px dashed #E2E2E2;border-radius:8px;padding:2rem;text-align:center;cursor:pointer;position:relative;transition:border-color .15s,background .15s;}
 .drop-zone:hover{border-color:#007A4D;background:#E6F4EE;}
 .drop-zone input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
@@ -118,50 +101,93 @@ textarea:focus{border-color:#007A4D;box-shadow:0 0 0 3px rgba(0,122,77,.1);}
 .file-list{display:flex;flex-direction:column;gap:6px;margin-top:10px;}
 .fitem{display:flex;align-items:center;justify-content:space-between;padding:8px 12px;background:#E6F4EE;border-radius:8px;font-size:12px;font-weight:500;color:#007A4D;animation:pop .18s ease;}
 @keyframes pop{from{opacity:0;transform:scale(.97);}to{opacity:1;transform:scale(1);}}
+.fitem-actions{display:flex;align-items:center;gap:6px;}
+.btn-certify{padding:3px 10px;background:#002395;color:#fff;border:none;border-radius:20px;font-family:'Inter',sans-serif;font-size:10px;font-weight:700;cursor:pointer;}
 .fitem-x{cursor:pointer;opacity:.5;font-size:15px;background:none;border:none;color:#007A4D;}
-.fitem-x:hover{opacity:1;}
-.btn-merge{padding:10px 20px;background:#0A0A0A;color:#fff;border:none;border-radius:8px;font-family:'Inter',sans-serif;font-size:13px;font-weight:700;cursor:pointer;margin-top:12px;transition:background .15s;}
-.btn-merge:hover{background:#333;}
-.btn-merge:disabled{opacity:.5;cursor:not-allowed;}
-.merge-result{background:#E6F4EE;border:1px solid rgba(0,122,77,.2);border-radius:8px;padding:14px;margin-top:12px;font-size:13px;color:#005038;display:none;}
-.merge-result.show{display:block;}
 
-/* ── HOME ── */
+/* CERTIFICATION */
+.bundle-card{background:#fff;border:1px solid #E2E2E2;border-radius:12px;padding:16px;margin-bottom:12px;transition:border-color .15s;}
+.bundle-card:hover{border-color:#007A4D;}
+.bundle-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+.bundle-name{font-size:14px;font-weight:700;color:#0A0A0A;}
+.bundle-meta{font-size:12px;color:#767676;margin-top:2px;}
+.bundle-docs{display:flex;flex-direction:column;gap:6px;margin-bottom:12px;}
+.bundle-doc{display:flex;align-items:center;gap:8px;padding:8px 10px;background:#F5F5F5;border-radius:6px;font-size:12px;}
+.bundle-doc .bd-icon{font-size:14px;}
+.bundle-doc .bd-name{flex:1;color:#0A0A0A;font-weight:500;}
+.bundle-doc .bd-check{font-size:11px;font-weight:700;}
+.bd-pass{color:#007A4D;}
+.bd-warn{color:#8a6500;}
+.ai-summary{background:#F0F7FF;border:1px solid #C7DEFF;border-radius:8px;padding:12px;margin-bottom:12px;font-size:12px;color:#002395;line-height:1.6;}
+.ai-summary strong{display:block;margin-bottom:4px;font-size:11px;text-transform:uppercase;letter-spacing:.05em;}
+.sign-area{border:1px solid #E2E2E2;border-radius:8px;overflow:hidden;margin-bottom:10px;}
+.sign-area canvas{display:block;cursor:crosshair;background:#fff;}
+.sign-controls{display:flex;gap:8px;padding:8px;background:#F5F5F5;border-top:1px solid #E2E2E2;}
+.cert-wording{background:#FFFBF0;border:1px solid #FFE4A0;border-radius:8px;padding:12px;font-size:12px;color:#5a4000;line-height:1.6;margin-bottom:12px;}
+.cert-wording strong{display:block;margin-bottom:4px;}
+
+/* ATS */
+textarea{width:100%;padding:10px 12px;border:1px solid #E2E2E2;border-radius:8px;font-family:'Inter',sans-serif;font-size:13px;color:#0A0A0A;resize:vertical;outline:none;transition:border-color .15s;}
+textarea:focus{border-color:#007A4D;box-shadow:0 0 0 3px rgba(0,122,77,.1);}
+.ring-wrap{position:relative;width:100px;height:100px;margin:0 auto 12px;}
+.ring-svg{transform:rotate(-90deg);}
+.ring-score{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.ring-score .big{font-size:26px;font-weight:800;letter-spacing:-.04em;}
+.ring-score .sm{font-size:10px;color:#767676;}
+.kw{padding:4px 10px;border-radius:40px;font-size:11px;font-weight:600;display:inline-block;margin:2px;}
+.kw-f{background:#E6F4EE;color:#007A4D;}
+.kw-m{background:#FDECEA;color:#7a1a1a;}
+.sug{display:flex;gap:10px;padding:10px 12px;background:#F5F5F5;border-radius:8px;border-left:3px solid #FFB612;font-size:12px;color:#0A0A0A;margin-bottom:6px;line-height:1.5;}
+.spinner{width:14px;height:14px;border:2px solid #E2E2E2;border-top-color:#007A4D;border-radius:50%;animation:spin .7s linear infinite;flex-shrink:0;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.loading-row{display:none;align-items:center;gap:8px;font-size:13px;color:#767676;padding:8px 0;}
+.loading-row.show{display:flex;}
+
+/* CHECKLIST */
+.doc-status-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
+.dsi{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid #E2E2E2;border-radius:8px;background:#fff;transition:background .2s;}
+.dsi.done{background:#E6F4EE;border-color:rgba(0,122,77,.2);}
+.dsi-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;background:#FFF8E6;}
+.dsi-info{flex:1;}
+.dsi-name{font-size:12px;font-weight:600;color:#0A0A0A;}
+.dsi-status{font-size:11px;color:#767676;}
+
+/* TOAST */
+.toast{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%) translateY(80px);background:#0A0A0A;color:#fff;padding:10px 18px;border-radius:40px;font-size:13px;font-weight:500;opacity:0;transition:all .25s cubic-bezier(.34,1.56,.64,1);white-space:nowrap;z-index:9999;}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+/* HOME GRID */
 .home-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px;}
 @media(max-width:700px){.home-grid{grid-template-columns:1fr;}}
 .home-card{background:#fff;border:1px solid #E2E2E2;border-radius:12px;padding:1.25rem;cursor:pointer;transition:border-color .15s,box-shadow .15s;}
 .home-card:hover{border-color:#007A4D;box-shadow:0 2px 12px rgba(0,122,77,.1);}
+.home-card.live{border-left:3px solid #007A4D;}
 .home-card .hc-icon{font-size:28px;margin-bottom:8px;}
 .home-card h4{font-size:13px;font-weight:700;margin-bottom:4px;}
 .home-card p{font-size:12px;color:#767676;}
-.hc-active{border-left:3px solid #007A4D;}
-
-/* ── TOAST ── */
-.toast{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%) translateY(80px);background:#0A0A0A;color:#fff;padding:10px 18px;border-radius:40px;font-size:13px;font-weight:500;opacity:0;transition:all .25s cubic-bezier(.34,1.56,.64,1);white-space:nowrap;z-index:9999;}
-.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
 </style>
 </head>
 <body>
 
+<!-- FLAG -->
 <div class="flag">
-  <span style="background:#000"></span>
-  <span style="background:#FFB612"></span>
-  <span style="background:#007A4D"></span>
-  <span style="background:#fff;border-top:1px solid #ddd"></span>
-  <span style="background:#DE3831"></span>
-  <span style="background:#002395"></span>
+  <span style="background:#000"></span><span style="background:#FFB612"></span>
+  <span style="background:#007A4D"></span><span style="background:#fff;border-top:1px solid #ddd"></span>
+  <span style="background:#DE3831"></span><span style="background:#002395"></span>
 </div>
 
+<!-- NAV -->
 <nav>
   <span class="wm">Certi<em>flow</em></span>
   <div class="nav-user" id="nav-user">
     <span id="nav-name"></span>
+    <span class="nav-role" id="nav-role"></span>
     <button class="btn-so" onclick="logout()">Sign out</button>
   </div>
 </nav>
 
-<!-- ══ AUTH ══ -->
-<div class="page active" id="auth-page">
+<!-- AUTH -->
+<div id="auth-page">
   <div class="auth-card">
     <h2>Welcome to Certiflow</h2>
     <p>Sign in to manage your Z83 application.</p>
@@ -185,23 +211,22 @@ textarea:focus{border-color:#007A4D;box-shadow:0 0 0 3px rgba(0,122,77,.1);}
       <div class="fld"><label>Password</label><input type="password" id="s-pass" placeholder="Min. 8 characters"></div>
       <button class="btn-main" onclick="emailSignup()">Create account</button>
     </div>
-    <p class="auth-foot">Protected under POPIA · Lofty Investments © 2025</p>
+    <p style="font-size:11px;color:#767676;text-align:center;margin-top:1.25rem;">Protected under POPIA · Lofty Investments © 2025</p>
   </div>
 </div>
 
-<!-- ══ DASHBOARD ══ -->
+<!-- DASHBOARD -->
 <div class="page" id="dash-page">
   <div class="dash-top">
     <h2 id="dash-greeting">Hi there 👋</h2>
-    <p>Welcome to your Certiflow dashboard.</p>
+    <p id="dash-sub">Welcome to your Certiflow dashboard.</p>
   </div>
-  <div class="dash-nav">
+  <div class="dash-nav" id="dash-nav">
     <button class="dnav-btn active" onclick="showPanel('home',this)">Home</button>
     <button class="dnav-btn" onclick="showPanel('verify',this)">Verification</button>
     <button class="dnav-btn" onclick="showPanel('ats',this)">ATS Analyser</button>
     <button class="dnav-btn" onclick="showPanel('docs',this)">Documents</button>
-    <button class="dnav-btn" onclick="showPanel('z83',this)">Z83 Form ·  Soon</button>
-    <button class="dnav-btn" onclick="showPanel('export',this)">Export · Soon</button>
+    <button class="dnav-btn" id="cert-tab" onclick="showPanel('cert',this)" style="display:none;">Certify Queue</button>
   </div>
 
   <div class="dash-body">
@@ -209,32 +234,32 @@ textarea:focus{border-color:#007A4D;box-shadow:0 0 0 3px rgba(0,122,77,.1);}
     <!-- HOME -->
     <div class="panel active" id="panel-home">
       <div class="home-grid">
-        <div class="home-card hc-active" onclick="showPanel('verify',document.querySelectorAll('.dnav-btn')[1])">
-          <div class="hc-icon">✅</div>
-          <h4>Verification</h4>
-          <p>Validate your SA ID number and check document status</p>
+        <div class="home-card live" onclick="showPanel('verify',document.querySelectorAll('.dnav-btn')[1])">
+          <div class="hc-icon">✅</div><h4>Verification</h4><p>Validate SA ID numbers instantly</p>
         </div>
-        <div class="home-card hc-active" onclick="showPanel('ats',document.querySelectorAll('.dnav-btn')[2])">
-          <div class="hc-icon">🎯</div>
-          <h4>ATS Analyser</h4>
-          <p>Score your CV against any job description using AI</p>
+        <div class="home-card live" onclick="showPanel('ats',document.querySelectorAll('.dnav-btn')[2])">
+          <div class="hc-icon">🎯</div><h4>ATS Analyser</h4><p>Score your CV with AI</p>
         </div>
-        <div class="home-card hc-active" onclick="showPanel('docs',document.querySelectorAll('.dnav-btn')[3])">
-          <div class="hc-icon">📁</div>
-          <h4>Documents</h4>
-          <p>Upload and merge your supporting documents</p>
+        <div class="home-card live" onclick="showPanel('docs',document.querySelectorAll('.dnav-btn')[3])">
+          <div class="hc-icon">📁</div><h4>Documents</h4><p>Upload and request certification</p>
         </div>
-        <div class="home-card" onclick="showPanel('z83',document.querySelectorAll('.dnav-btn')[4])">
-          <div class="hc-icon">📄</div>
-          <h4>Z83 Form</h4>
-          <p>Complete your government employment application</p>
-          <span class="pill p-y" style="margin-top:8px;display:inline-block;">Coming soon</span>
+        <div class="home-card" style="cursor:default;opacity:.6;">
+          <div class="hc-icon">📄</div><h4>Z83 Form</h4><p>Coming soon</p>
+          <span class="pill p-y" style="margin-top:8px;display:inline-block;">Soon</span>
         </div>
-        <div class="home-card" onclick="showPanel('export',document.querySelectorAll('.dnav-btn')[5])">
-          <div class="hc-icon">📤</div>
-          <h4>Export</h4>
-          <p>Download your Z83 and documents as PDF</p>
-          <span class="pill p-y" style="margin-top:8px;display:inline-block;">Coming soon</span>
+        <div class="home-card" style="cursor:default;opacity:.6;">
+          <div class="hc-icon">📤</div><h4>Export</h4><p>Coming soon</p>
+          <span class="pill p-y" style="margin-top:8px;display:inline-block;">Soon</span>
+        </div>
+      </div>
+
+      <!-- Certification status for users -->
+      <div class="card" id="my-cert-status">
+        <div class="card-head"><h3>My Certification Requests</h3><span class="pill p-d" id="cert-count-pill">0 requests</span></div>
+        <div class="card-body">
+          <div id="cert-requests-list">
+            <p style="font-size:13px;color:#767676;">No certification requests yet. Upload documents and request certification from the Documents tab.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -242,85 +267,42 @@ textarea:focus{border-color:#007A4D;box-shadow:0 0 0 3px rgba(0,122,77,.1);}
     <!-- VERIFICATION -->
     <div class="panel" id="panel-verify">
       <div class="card">
-        <div class="card-head">
-          <h3>SA ID Number Validation</h3>
-          <span class="pill p-g">Instant · No API needed</span>
-        </div>
+        <div class="card-head"><h3>SA ID Number Validation</h3><span class="pill p-g">Instant · No API needed</span></div>
         <div class="card-body">
-          <p style="font-size:13px;color:#767676;margin-bottom:12px;">Enter a South African ID number to verify it's mathematically valid and extract the encoded information.</p>
+          <p style="font-size:13px;color:#767676;margin-bottom:12px;">Enter a South African ID number to verify it's mathematically valid and extract the encoded personal information.</p>
           <div class="id-input-wrap">
             <input type="text" id="id-input" placeholder="Enter 13-digit SA ID number" maxlength="13" oninput="this.value=this.value.replace(/\D/g,'')">
-            <button class="btn-check" onclick="validateID()">Validate</button>
+            <button class="btn-green" onclick="validateID()">Validate</button>
           </div>
           <div class="id-result" id="id-result"></div>
-          <div class="id-breakdown" id="id-breakdown" style="display:none;margin-top:12px;"></div>
+          <div class="id-breakdown" id="id-breakdown"></div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-head">
-          <h3>Document Checklist</h3>
-          <span class="pill p-d" id="doc-checklist-pill">0 / 4 verified</span>
-        </div>
+        <div class="card-head"><h3>Document Checklist</h3><span class="pill p-d" id="doc-checklist-pill">0 / 4</span></div>
         <div class="card-body">
           <div class="doc-status-grid">
-            <div class="doc-status-item" id="dsi-id">
-              <div class="ds-icon" style="background:#FFF8E6;">🪪</div>
-              <div class="ds-info">
-                <div class="ds-name">ID Document</div>
-                <div class="ds-status" id="dss-id">Not uploaded</div>
-              </div>
-              <span class="pill p-d" id="dsp-id">Pending</span>
-            </div>
-            <div class="doc-status-item" id="dsi-cv">
-              <div class="ds-icon" style="background:#FFF8E6;">📋</div>
-              <div class="ds-info">
-                <div class="ds-name">CV / Resume</div>
-                <div class="ds-status" id="dss-cv">Not uploaded</div>
-              </div>
-              <span class="pill p-d" id="dsp-cv">Pending</span>
-            </div>
-            <div class="doc-status-item" id="dsi-qual">
-              <div class="ds-icon" style="background:#FFF8E6;">🎓</div>
-              <div class="ds-info">
-                <div class="ds-name">Qualifications</div>
-                <div class="ds-status" id="dss-qual">Not uploaded</div>
-              </div>
-              <span class="pill p-d" id="dsp-qual">Pending</span>
-            </div>
-            <div class="doc-status-item" id="dsi-ref">
-              <div class="ds-icon" style="background:#FFF8E6;">📝</div>
-              <div class="ds-info">
-                <div class="ds-name">References</div>
-                <div class="ds-status" id="dss-ref">Not uploaded</div>
-              </div>
-              <span class="pill p-d" id="dsp-ref">Pending</span>
-            </div>
+            <div class="dsi" id="dsi-id"><div class="dsi-icon">🪪</div><div class="dsi-info"><div class="dsi-name">ID Document</div><div class="dsi-status" id="dss-id">Not uploaded</div></div><span class="pill p-d" id="dsp-id">Pending</span></div>
+            <div class="dsi" id="dsi-cv"><div class="dsi-icon">📋</div><div class="dsi-info"><div class="dsi-name">CV / Resume</div><div class="dsi-status" id="dss-cv">Not uploaded</div></div><span class="pill p-d" id="dsp-cv">Pending</span></div>
+            <div class="dsi" id="dsi-qual"><div class="dsi-icon">🎓</div><div class="dsi-info"><div class="dsi-name">Qualifications</div><div class="dsi-status" id="dss-qual">Not uploaded</div></div><span class="pill p-d" id="dsp-qual">Pending</span></div>
+            <div class="dsi" id="dsi-ref"><div class="dsi-icon">📝</div><div class="dsi-info"><div class="dsi-name">References</div><div class="dsi-status" id="dss-ref">Not uploaded</div></div><span class="pill p-d" id="dsp-ref">Pending</span></div>
           </div>
-          <p style="font-size:11px;color:#767676;margin-top:12px;">Upload documents in the Documents tab to update this checklist automatically.</p>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-head">
-          <h3>DHA &amp; SAQA Verification</h3>
-          <span class="pill p-y">Coming soon</span>
-        </div>
-        <div class="card-body">
-          <p style="font-size:13px;color:#767676;">Real-time verification against the Department of Home Affairs and SA Qualifications Authority databases. This feature will confirm your ID and qualifications against official government records.</p>
-        </div>
+        <div class="card-head"><h3>DHA &amp; SAQA Verification</h3><span class="pill p-y">Coming soon</span></div>
+        <div class="card-body"><p style="font-size:13px;color:#767676;">Real-time verification against Department of Home Affairs and SA Qualifications Authority databases. Coming once government API access is granted.</p></div>
       </div>
     </div>
 
-    <!-- ATS ANALYSER -->
+    <!-- ATS -->
     <div class="panel" id="panel-ats">
       <div class="card">
-        <div class="card-head">
-          <h3>ATS CV Analyser</h3>
-          <span class="pill p-g">Powered by Claude AI</span>
-        </div>
+        <div class="card-head"><h3>ATS CV Analyser</h3><span class="pill p-g">Powered by Claude AI</span></div>
         <div class="card-body">
-          <p style="font-size:13px;color:#767676;margin-bottom:14px;">Paste a job description and your CV — Claude will score your match, flag missing keywords, and suggest improvements.</p>
+          <p style="font-size:13px;color:#767676;margin-bottom:14px;">Paste a job description and your CV to get an ATS score, missing keywords, and improvement suggestions.</p>
           <div class="two-col" style="margin-bottom:12px;">
             <div>
               <label style="display:block;font-size:11px;font-weight:600;color:#767676;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;">Job Description</label>
@@ -332,17 +314,15 @@ textarea:focus{border-color:#007A4D;box-shadow:0 0 0 3px rgba(0,122,77,.1);}
             </div>
           </div>
           <div style="display:flex;align-items:center;gap:10px;">
-            <button class="btn-analyse" onclick="runATS()">Analyse CV</button>
-            <button class="btn-clear" onclick="clearATS()">Clear</button>
-            <div class="ats-loading" id="ats-loading"><div class="spinner"></div><span>Analysing with Claude...</span></div>
+            <button class="btn-green" onclick="runATS()">Analyse CV</button>
+            <button class="btn-outline" onclick="clearATS()">Clear</button>
+            <div class="loading-row" id="ats-loading"><div class="spinner"></div><span>Analysing with Claude...</span></div>
           </div>
         </div>
       </div>
-
       <div id="ats-results" style="display:none;">
         <div class="two-col">
-          <div class="card">
-            <div class="card-head"><h3>ATS Score</h3><span class="pill p-d" id="ats-grade">—</span></div>
+          <div class="card"><div class="card-head"><h3>ATS Score</h3><span class="pill p-d" id="ats-grade">—</span></div>
             <div class="card-body" style="text-align:center;">
               <div class="ring-wrap">
                 <svg class="ring-svg" width="100" height="100" viewBox="0 0 100 100">
@@ -354,18 +334,9 @@ textarea:focus{border-color:#007A4D;box-shadow:0 0 0 3px rgba(0,122,77,.1);}
               <p id="ats-summary" style="font-size:12px;color:#767676;line-height:1.6;max-width:220px;margin:0 auto;"></p>
             </div>
           </div>
-          <div class="card">
-            <div class="card-head"><h3>Keywords Found</h3><span class="pill p-g" id="kw-found-count">0</span></div>
-            <div class="card-body"><div id="kw-found"></div></div>
-          </div>
-          <div class="card">
-            <div class="card-head"><h3>Missing Keywords</h3><span class="pill p-r" id="kw-miss-count">0</span></div>
-            <div class="card-body"><div id="kw-miss"></div></div>
-          </div>
-          <div class="card">
-            <div class="card-head"><h3>Suggestions</h3></div>
-            <div class="card-body"><div id="ats-sug"></div></div>
-          </div>
+          <div class="card"><div class="card-head"><h3>Keywords Found</h3><span class="pill p-g" id="kw-found-count">0</span></div><div class="card-body"><div id="kw-found"></div></div></div>
+          <div class="card"><div class="card-head"><h3>Missing Keywords</h3><span class="pill p-r" id="kw-miss-count">0</span></div><div class="card-body"><div id="kw-miss"></div></div></div>
+          <div class="card"><div class="card-head"><h3>Suggestions</h3></div><div class="card-body"><div id="ats-sug"></div></div></div>
         </div>
       </div>
     </div>
@@ -386,36 +357,57 @@ textarea:focus{border-color:#007A4D;box-shadow:0 0 0 3px rgba(0,122,77,.1);}
       </div>
 
       <div class="card">
-        <div class="card-head"><h3>Document Merge</h3><span class="pill p-g">Combine into one PDF</span></div>
+        <div class="card-head"><h3>Request Certification</h3><span class="pill p-b">Commissioner of Oaths</span></div>
         <div class="card-body">
-          <p style="font-size:13px;color:#767676;margin-bottom:12px;">Select the documents you want to merge into a single PDF for submission. Your files will be combined in the order listed above.</p>
-          <div id="merge-file-select" style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px;"></div>
-          <button class="btn-merge" id="btn-merge" onclick="mergeDocuments()" disabled>Merge selected documents</button>
-          <div class="merge-result" id="merge-result"></div>
+          <p style="font-size:13px;color:#767676;margin-bottom:14px;">Select documents to send for certification. Our Commissioner of Oaths will review your bundle and certify all documents together.</p>
+          <div id="cert-select-list" style="display:flex;flex-direction:column;gap:6px;margin-bottom:14px;">
+            <p style="font-size:13px;color:#767676;">Upload documents above to select them for certification.</p>
+          </div>
+          <div class="fld">
+            <label>Notes for the Commissioner (optional)</label>
+            <input type="text" id="cert-notes" placeholder="e.g. Urgent — job application deadline Friday">
+          </div>
+          <button class="btn-black" onclick="requestCertification()" id="btn-request-cert" disabled>Submit for certification</button>
         </div>
       </div>
     </div>
 
-    <!-- Z83 COMING SOON -->
-    <div class="panel" id="panel-z83">
+    <!-- CERTIFICATION QUEUE (Lawyer/Admin only) -->
+    <div class="panel" id="panel-cert">
       <div class="card">
-        <div class="card-head"><h3>Z83 Application Form</h3><span class="pill p-y">Coming soon</span></div>
-        <div class="card-body" style="text-align:center;padding:3rem;">
-          <div style="font-size:48px;margin-bottom:16px;">📄</div>
-          <h3 style="font-size:18px;font-weight:800;margin-bottom:8px;">Z83 Form coming soon</h3>
-          <p style="font-size:13px;color:#767676;max-width:400px;margin:0 auto;">Complete your official government employment application form directly in Certiflow. We're finalising the Z83 structure to match the latest government requirements.</p>
+        <div class="card-head"><h3>Pending Certification Queue</h3><span class="pill p-b" id="queue-count">0 bundles</span></div>
+        <div class="card-body">
+          <p style="font-size:13px;color:#767676;margin-bottom:14px;">Each bundle contains all documents submitted by one applicant. Review the AI summary, check the documents, sign once to certify the entire bundle.</p>
+          <div id="cert-queue"></div>
         </div>
       </div>
-    </div>
 
-    <!-- EXPORT COMING SOON -->
-    <div class="panel" id="panel-export">
-      <div class="card">
-        <div class="card-head"><h3>Export</h3><span class="pill p-y">Coming soon</span></div>
-        <div class="card-body" style="text-align:center;padding:3rem;">
-          <div style="font-size:48px;margin-bottom:16px;">📤</div>
-          <h3 style="font-size:18px;font-weight:800;margin-bottom:8px;">Export coming soon</h3>
-          <p style="font-size:13px;color:#767676;max-width:400px;margin:0 auto;">Download your completed Z83 form as a print-ready PDF, along with all your supporting documents in a single package.</p>
+      <!-- Signature Panel -->
+      <div class="card" id="sign-panel" style="display:none;">
+        <div class="card-head"><h3>Sign &amp; Certify Bundle</h3><span class="pill p-b" id="sign-bundle-name">—</span></div>
+        <div class="card-body">
+          <div class="cert-wording">
+            <strong>Certification wording (SA Commissioner of Oaths):</strong>
+            I, <span id="cert-commissioner-name">[Commissioner Name]</span>, Commissioner of Oaths, hereby certify that the documents in this bundle are true copies of the originals presented to me, and that the identity of the applicant has been verified to the best of my ability.
+            <br><br>
+            Appointment: <span id="cert-appointment">[Appointment Number — pending registration]</span><br>
+            Date: <span id="cert-date"></span>
+          </div>
+
+          <label style="display:block;font-size:11px;font-weight:600;color:#767676;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;">Draw your signature below:</label>
+          <div class="sign-area">
+            <canvas id="sign-canvas" width="500" height="120"></canvas>
+            <div class="sign-controls">
+              <button class="btn-outline" onclick="clearSignature()" style="font-size:12px;padding:5px 10px;">Clear</button>
+              <span style="font-size:11px;color:#767676;margin-left:auto;">Draw your signature above</span>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:8px;margin-top:12px;">
+            <button class="btn-green" onclick="certifyBundle()" style="flex:1;">✓ Certify entire bundle</button>
+            <button class="btn-red" onclick="rejectBundle()">✗ Reject</button>
+            <button class="btn-outline" onclick="closeSignPanel()">Cancel</button>
+          </div>
         </div>
       </div>
     </div>
@@ -427,17 +419,16 @@ textarea:focus{border-color:#007A4D;box-shadow:0 0 0 3px rgba(0,122,77,.1);}
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-/* ── SUPABASE ── */
 const sb = supabase.createClient(
   'https://lgpkqecwtkvemiecfeuf.supabase.co',
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxncGtxZWN3dGt2ZW1pZWNmZXVmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM4NzcwMzUsImV4cCI6MjA5OTQ1MzAzNX0.uhQkMLf5ZtSm-e97dRFnvTy0OQKWwXlZOqrPLLEIRh8'
 );
 
-const st = { files: [] };
+const st = { user: null, role: 'user', files: [], currentBundle: null };
 
-/* ── PAGE UTILS ── */
-function showAuthPage()  { document.getElementById('auth-page').classList.add('active'); document.getElementById('dash-page').classList.remove('active'); }
-function showDashPage()  { document.getElementById('auth-page').classList.remove('active'); document.getElementById('dash-page').classList.add('active'); }
+/* ── PAGE CONTROL ── */
+function showAuth() { document.getElementById('auth-page').classList.add('active'); document.getElementById('dash-page').classList.remove('active'); }
+function showDash() { document.getElementById('auth-page').classList.remove('active'); document.getElementById('dash-page').classList.add('active'); }
 
 function showPanel(name, btn) {
   document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
@@ -449,14 +440,14 @@ function showPanel(name, btn) {
 /* ── AUTH ── */
 function switchTab(t) {
   document.querySelectorAll('.tab-btn').forEach((b,i) => b.classList.toggle('active',(t==='login'&&i===0)||(t==='signup'&&i===1)));
-  document.getElementById('form-login').style.display = t==='login' ? 'block' : 'none';
-  document.getElementById('form-signup').style.display = t==='signup' ? 'block' : 'none';
+  document.getElementById('form-login').style.display = t==='login'?'block':'none';
+  document.getElementById('form-signup').style.display = t==='signup'?'block':'none';
 }
 
 async function loginWithGoogle() {
   const { error } = await sb.auth.signInWithOAuth({
     provider: 'google',
-    options: { redirectTo: window.location.href }
+    options: { redirectTo: 'https://certiflowv2.vercel.app' }
   });
   if (error) toast(error.message);
 }
@@ -464,10 +455,10 @@ async function loginWithGoogle() {
 async function emailLogin() {
   const email = document.getElementById('l-email').value.trim();
   const pass  = document.getElementById('l-pass').value;
-  if (!email || !pass) return toast('Fill in all fields');
+  if (!email||!pass) return toast('Fill in all fields');
   const { data, error } = await sb.auth.signInWithPassword({ email, password: pass });
   if (error) return toast(error.message);
-  enterDash(data.user);
+  await enterDash(data.user);
 }
 
 async function emailSignup() {
@@ -478,32 +469,57 @@ async function emailSignup() {
   if (pass.length < 8) return toast('Password needs 8+ characters');
   const { data, error } = await sb.auth.signUp({ email, password: pass });
   if (error) return toast(error.message);
-  enterDash(data.user);
+  await enterDash(data.user);
   toast('Account created — welcome!');
 }
 
 async function logout() {
   await sb.auth.signOut();
   document.getElementById('nav-user').style.display = 'none';
-  showAuthPage();
+  showAuth();
 }
 
-function enterDash(user) {
-  const name = user.user_metadata?.full_name || user.email?.split('@')[0] || 'there';
+async function enterDash(user) {
+  st.user = user;
+
+  // Get role from profiles
+  const { data: profile } = await sb.from('profiles').select('role, full_name').eq('id', user.id).single();
+  st.role = profile?.role || 'user';
+
+  const name = profile?.full_name || user.user_metadata?.full_name || user.email?.split('@')[0] || 'there';
   const first = name.split(' ')[0];
+
   document.getElementById('dash-greeting').textContent = 'Hi, ' + first + ' 👋';
   document.getElementById('nav-name').textContent = first;
+
+  const roleEl = document.getElementById('nav-role');
+  roleEl.textContent = st.role;
+  roleEl.className = 'nav-role role-' + st.role;
+
   document.getElementById('nav-user').style.display = 'flex';
-  showDashPage();
+
+  // Show lawyer/admin cert tab
+  if (st.role === 'lawyer' || st.role === 'admin') {
+    document.getElementById('cert-tab').style.display = 'block';
+    document.getElementById('dash-sub').textContent = 'Commissioner of Oaths dashboard — certify document bundles.';
+    loadCertQueue();
+  }
+
+  // Set commissioner name in cert wording
+  document.getElementById('cert-commissioner-name').textContent = name;
+  document.getElementById('cert-date').textContent = new Date().toLocaleDateString('en-ZA', {day:'2-digit',month:'long',year:'numeric'});
+
+  showDash();
+  loadMyCertRequests();
 }
 
 /* ── SESSION ── */
 async function init() {
   const { data: { session } } = await sb.auth.getSession();
-  if (session) enterDash(session.user);
+  if (session) await enterDash(session.user);
 }
 
-/* ── SA ID VALIDATION ── */
+/* ── ID VALIDATION ── */
 function validateID() {
   const id = document.getElementById('id-input').value.trim();
   const result = document.getElementById('id-result');
@@ -517,59 +533,276 @@ function validateID() {
     return;
   }
 
-  // Extract info
-  const yy   = id.substring(0,2);
-  const mm   = id.substring(2,4);
-  const dd   = id.substring(4,6);
-  const gen  = parseInt(id.substring(6,10));
-  const cit  = id.substring(10,11);
-  const year = parseInt(yy) <= new Date().getFullYear()%100 ? '20'+yy : '19'+yy;
+  const yy=id.substring(0,2), mm=id.substring(2,4), dd=id.substring(4,6);
+  const gen=parseInt(id.substring(6,10)), cit=id.substring(10,11);
+  const year=parseInt(yy)<=new Date().getFullYear()%100?'20'+yy:'19'+yy;
 
-  // Luhn algorithm
-  let sum = 0;
-  for (let i = 0; i < 12; i++) {
-    let d = parseInt(id[i]);
-    if (i % 2 !== 0) { d *= 2; if (d > 9) d -= 9; }
-    sum += d;
-  }
-  const checkDigit = (10 - (sum % 10)) % 10;
-  const valid = checkDigit === parseInt(id[12]);
+  let sum=0;
+  for(let i=0;i<12;i++){let d=parseInt(id[i]);if(i%2!==0){d*=2;if(d>9)d-=9;}sum+=d;}
+  const valid=(10-(sum%10))%10===parseInt(id[12]);
 
-  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  const monthName = months[parseInt(mm)-1] || 'Invalid';
-  const gender = gen >= 5000 ? 'Male' : 'Female';
-  const citizen = cit === '0' ? 'SA Citizen' : 'Permanent Resident';
+  const months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const gender=gen>=5000?'Male':'Female';
+  const citizen=cit==='0'?'SA Citizen':'Permanent Resident';
 
-  if (valid) {
-    result.className = 'id-result valid';
-    result.style.display = 'block';
-    result.innerHTML = '✓ Valid South African ID number — Luhn checksum passed.';
-    breakdown.style.display = 'grid';
-    breakdown.innerHTML = `
-      <div class="id-field"><div class="lbl">Date of birth</div><div class="val">${dd} ${monthName} ${year}</div></div>
+  if(valid){
+    result.className='id-result valid';
+    result.style.display='block';
+    result.innerHTML='✓ Valid South African ID number — Luhn checksum passed.';
+    breakdown.style.display='grid';
+    breakdown.innerHTML=`
+      <div class="id-field"><div class="lbl">Date of birth</div><div class="val">${dd} ${months[parseInt(mm)-1]} ${year}</div></div>
       <div class="id-field"><div class="lbl">Gender</div><div class="val">${gender}</div></div>
-      <div class="id-field"><div class="lbl">Status</div><div class="val">${citizen}</div></div>
-    `;
-    toast('ID number is valid');
+      <div class="id-field"><div class="lbl">Status</div><div class="val">${citizen}</div></div>`;
+    toast('ID number is valid ✓');
   } else {
-    result.className = 'id-result invalid';
-    result.style.display = 'block';
-    result.innerHTML = '✗ Invalid ID number — checksum failed. Please check the number and try again.';
-    breakdown.style.display = 'none';
+    result.className='id-result invalid';
+    result.style.display='block';
+    result.innerHTML='✗ Invalid ID number — checksum failed. Please double-check the number.';
+    breakdown.style.display='none';
     toast('ID number is invalid');
   }
 }
 
-/* ── ATS ANALYSER ── */
-async function runATS() {
-  const jd = document.getElementById('ats-jd').value.trim();
-  const cv = document.getElementById('ats-cv').value.trim();
-  if (!jd || !cv) return toast('Paste both a job description and your CV');
+/* ── DOCUMENTS ── */
+function handleUpload(input) {
+  const files = Array.from(input.files);
+  files.forEach(f => {
+    if(st.files.find(x=>x.name===f.name)) return;
+    st.files.push(f);
+    addFileItem(f);
+    updateChecklist(f.name);
+  });
+  document.getElementById('upload-count').textContent = st.files.length+' file'+(st.files.length!==1?'s':'');
+  updateCertSelectList();
+  toast(files.length+' file'+(files.length>1?'s':'')+' added');
+}
 
-  document.getElementById('ats-results').style.display = 'none';
+function addFileItem(f) {
+  const list = document.getElementById('file-list');
+  const d = document.createElement('div');
+  d.className='fitem';
+  d.id='fi-'+f.name.replace(/[^a-z0-9]/gi,'_');
+  d.innerHTML=`<span>📄 ${f.name}</span><div class="fitem-actions"><button class="fitem-x" onclick="removeFile('${f.name}')">✕</button></div>`;
+  list.appendChild(d);
+}
+
+function removeFile(name) {
+  st.files=st.files.filter(f=>f.name!==name);
+  const el=document.getElementById('fi-'+name.replace(/[^a-z0-9]/gi,'_'));
+  if(el)el.remove();
+  document.getElementById('upload-count').textContent=st.files.length+' file'+(st.files.length!==1?'s':'');
+  updateCertSelectList();
+  updateChecklist();
+  toast('File removed');
+}
+
+function updateCertSelectList() {
+  const container = document.getElementById('cert-select-list');
+  const btn = document.getElementById('btn-request-cert');
+  if(st.files.length===0){
+    container.innerHTML='<p style="font-size:13px;color:#767676;">Upload documents above to select them for certification.</p>';
+    btn.disabled=true;
+    return;
+  }
+  container.innerHTML='';
+  st.files.forEach(f=>{
+    const row=document.createElement('label');
+    row.style.cssText='display:flex;align-items:center;gap:8px;padding:8px 10px;background:#F5F5F5;border-radius:6px;font-size:12px;cursor:pointer;';
+    row.innerHTML=`<input type="checkbox" checked style="accent-color:#007A4D;width:15px;height:15px;"> <span>📄 ${f.name}</span>`;
+    container.appendChild(row);
+  });
+  btn.disabled=false;
+}
+
+function updateChecklist(filename) {
+  const map={id:['id','passport','identity'],cv:['cv','resume','curriculum'],qual:['qualif','matric','certif','degree','diploma'],ref:['ref','recommend','letter']};
+  let done=0;
+  Object.entries(map).forEach(([key,kws])=>{
+    const matched=st.files.some(f=>kws.some(k=>f.name.toLowerCase().includes(k)));
+    const pill=document.getElementById('dsp-'+key);
+    const status=document.getElementById('dss-'+key);
+    const item=document.getElementById('dsi-'+key);
+    if(matched){pill.textContent='Uploaded';pill.className='pill p-g';status.textContent='Ready for certification';item.classList.add('done');done++;}
+    else{pill.textContent='Pending';pill.className='pill p-d';status.textContent='Not uploaded';item.classList.remove('done');}
+  });
+  const cp=document.getElementById('doc-checklist-pill');
+  cp.textContent=done+' / 4';
+  cp.className='pill '+(done===4?'p-g':done>0?'p-y':'p-d');
+}
+
+/* ── CERTIFICATION REQUEST (User) ── */
+async function requestCertification() {
+  const checked=Array.from(document.getElementById('cert-select-list').querySelectorAll('input:checked'));
+  if(checked.length===0) return toast('Select at least one document');
+  const notes=document.getElementById('cert-notes').value.trim();
+  const docNames=checked.map(cb=>cb.closest('label').querySelector('span').textContent.replace('📄 ',''));
+
+  // Save to Supabase
+  const { error } = await sb.from('certification_requests').insert({
+    user_id: st.user.id,
+    document_name: docNames.join(', '),
+    storage_path: 'pending-upload',
+    status: 'pending',
+    notes: notes || null
+  });
+
+  if(error){ toast('Failed to submit — try again'); console.error(error); return; }
+
+  toast('Certification request submitted! ✓');
+  document.getElementById('cert-notes').value='';
+  loadMyCertRequests();
+}
+
+async function loadMyCertRequests() {
+  if(!st.user) return;
+  const { data } = await sb.from('certification_requests').select('*').eq('user_id', st.user.id).order('created_at',{ascending:false});
+  const list = document.getElementById('cert-requests-list');
+  const pill = document.getElementById('cert-count-pill');
+  if(!data||data.length===0){
+    list.innerHTML='<p style="font-size:13px;color:#767676;">No certification requests yet.</p>';
+    pill.textContent='0 requests';
+    return;
+  }
+  pill.textContent=data.length+' request'+(data.length!==1?'s':'');
+  list.innerHTML=data.map(r=>`
+    <div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #E2E2E2;">
+      <div style="flex:1;">
+        <div style="font-size:13px;font-weight:600;color:#0A0A0A;">📄 ${r.document_name}</div>
+        <div style="font-size:11px;color:#767676;margin-top:2px;">${new Date(r.created_at).toLocaleDateString('en-ZA')}</div>
+      </div>
+      <span class="pill ${r.status==='certified'?'p-g':r.status==='rejected'?'p-r':r.status==='reviewing'?'p-b':'p-y'}">${r.status}</span>
+    </div>
+  `).join('');
+}
+
+/* ── CERT QUEUE (Lawyer/Admin) ── */
+async function loadCertQueue() {
+  const { data } = await sb.from('certification_requests').select('*, profiles!user_id(full_name, email)').eq('status','pending').order('created_at',{ascending:true});
+  const queue = document.getElementById('cert-queue');
+  const pill = document.getElementById('queue-count');
+
+  if(!data||data.length===0){
+    queue.innerHTML='<p style="font-size:13px;color:#767676;">No pending certification requests. 🎉</p>';
+    pill.textContent='0 bundles';
+    return;
+  }
+
+  pill.textContent=data.length+' bundle'+(data.length!==1?'s':'');
+
+  queue.innerHTML=data.map((r,i)=>`
+    <div class="bundle-card">
+      <div class="bundle-header">
+        <div>
+          <div class="bundle-name">👤 ${r.profiles?.full_name||r.profiles?.email||'Unknown applicant'}</div>
+          <div class="bundle-meta">Submitted ${new Date(r.created_at).toLocaleDateString('en-ZA')} · ${r.document_name}</div>
+          ${r.notes?'<div class="bundle-meta" style="color:#002395;margin-top:2px;">📌 Note: '+r.notes+'</div>':''}
+        </div>
+        <span class="pill p-y">Pending</span>
+      </div>
+      <div class="bundle-docs">
+        ${r.document_name.split(', ').map(d=>`
+          <div class="bundle-doc">
+            <span class="bd-icon">📄</span>
+            <span class="bd-name">${d}</span>
+            <span class="bd-check bd-pass">✓ Submitted</span>
+          </div>
+        `).join('')}
+      </div>
+      <div class="ai-summary">
+        <strong>🤖 Pre-screening summary</strong>
+        Bundle contains ${r.document_name.split(', ').length} document(s). Applicant identity pending physical verification. All documents submitted through secured Certiflow platform with audit trail.
+      </div>
+      <div style="display:flex;gap:8px;">
+        <button class="btn-green" onclick="openSignPanel('${r.id}','${(r.profiles?.full_name||r.profiles?.email||'Applicant').replace(/'/g,"\\'")}')">Review &amp; Sign bundle</button>
+        <button class="btn-red" onclick="rejectRequest('${r.id}')">Reject</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+/* ── SIGNATURE ── */
+let signCanvas, signCtx, signing=false;
+
+function openSignPanel(requestId, applicantName) {
+  st.currentBundle = requestId;
+  document.getElementById('sign-bundle-name').textContent = applicantName;
+  document.getElementById('sign-panel').style.display = 'block';
+  document.getElementById('sign-panel').scrollIntoView({behavior:'smooth'});
+  initCanvas();
+}
+
+function closeSignPanel() {
+  document.getElementById('sign-panel').style.display='none';
+  st.currentBundle=null;
+}
+
+function initCanvas() {
+  signCanvas=document.getElementById('sign-canvas');
+  signCtx=signCanvas.getContext('2d');
+  signCtx.clearRect(0,0,signCanvas.width,signCanvas.height);
+  signCtx.strokeStyle='#0A0A0A';
+  signCtx.lineWidth=2;
+  signCtx.lineCap='round';
+
+  signCanvas.onmousedown=e=>{signing=true;signCtx.beginPath();signCtx.moveTo(e.offsetX,e.offsetY);};
+  signCanvas.onmousemove=e=>{if(!signing)return;signCtx.lineTo(e.offsetX,e.offsetY);signCtx.stroke();};
+  signCanvas.onmouseup=()=>signing=false;
+  signCanvas.onmouseleave=()=>signing=false;
+
+  // Touch support
+  signCanvas.ontouchstart=e=>{e.preventDefault();signing=true;const r=signCanvas.getBoundingClientRect();const t=e.touches[0];signCtx.beginPath();signCtx.moveTo(t.clientX-r.left,t.clientY-r.top);};
+  signCanvas.ontouchmove=e=>{e.preventDefault();if(!signing)return;const r=signCanvas.getBoundingClientRect();const t=e.touches[0];signCtx.lineTo(t.clientX-r.left,t.clientY-r.top);signCtx.stroke();};
+  signCanvas.ontouchend=()=>signing=false;
+}
+
+function clearSignature() {
+  if(signCtx) signCtx.clearRect(0,0,signCanvas.width,signCanvas.height);
+}
+
+async function certifyBundle() {
+  if(!st.currentBundle) return;
+
+  // Check signature drawn
+  const imageData=signCtx.getImageData(0,0,signCanvas.width,signCanvas.height);
+  const hasSignature=imageData.data.some((v,i)=>i%4!==3&&v!==0);
+  if(!hasSignature) return toast('Please draw your signature first');
+
+  const { error } = await sb.from('certification_requests').update({
+    status:'certified',
+    lawyer_id: st.user.id,
+    certified_at: new Date().toISOString()
+  }).eq('id',st.currentBundle);
+
+  if(error){ toast('Failed to certify — try again'); return; }
+
+  toast('Bundle certified successfully ✓');
+  closeSignPanel();
+  loadCertQueue();
+}
+
+async function rejectBundle() {
+  if(!st.currentBundle) return;
+  await rejectRequest(st.currentBundle);
+  closeSignPanel();
+}
+
+async function rejectRequest(id) {
+  const { error } = await sb.from('certification_requests').update({ status:'rejected' }).eq('id',id);
+  if(error){ toast('Failed to reject'); return; }
+  toast('Request rejected');
+  loadCertQueue();
+}
+
+/* ── ATS ── */
+async function runATS() {
+  const jd=document.getElementById('ats-jd').value.trim();
+  const cv=document.getElementById('ats-cv').value.trim();
+  if(!jd||!cv) return toast('Paste both a job description and your CV');
+  document.getElementById('ats-results').style.display='none';
   document.getElementById('ats-loading').classList.add('show');
 
-  const prompt = `You are an expert ATS (Applicant Tracking System) analyst. Analyse this CV against the job description and respond ONLY with valid JSON — no markdown, no backticks, no extra text.
+  const prompt=`You are an expert ATS analyst. Analyse this CV against the job description. Respond ONLY with valid JSON — no markdown, no backticks.
 
 JOB DESCRIPTION:
 ${jd}
@@ -577,172 +810,53 @@ ${jd}
 CV:
 ${cv}
 
-Respond with exactly this structure:
-{"score":<integer 0-100>,"grade":"<Excellent|Good|Fair|Poor>","summary":"<2 sentence summary>","keywords_found":["<keyword>"],"keywords_missing":["<keyword>"],"suggestions":[{"text":"<actionable tip>"}]}
+JSON structure:
+{"score":<0-100>,"grade":"<Excellent|Good|Fair|Poor>","summary":"<2 sentences>","keywords_found":["<kw>"],"keywords_missing":["<kw>"],"suggestions":[{"text":"<tip>"}]}
 
 Rules: keywords_found max 12, keywords_missing max 10, suggestions exactly 4.`;
 
   try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 1000,
-        messages: [{ role: 'user', content: prompt }]
-      })
-    });
-    const data = await res.json();
-    const raw = (data.content || []).map(b => b.text || '').join('');
-    const r = JSON.parse(raw.replace(/```json|```/g,'').trim());
-    renderATS(r);
-  } catch(err) {
-    toast('Analysis failed — try again');
-    console.error(err);
-  } finally {
-    document.getElementById('ats-loading').classList.remove('show');
-  }
+    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,messages:[{role:'user',content:prompt}]})});
+    const data=await res.json();
+    const raw=(data.content||[]).map(b=>b.text||'').join('');
+    renderATS(JSON.parse(raw.replace(/```json|```/g,'').trim()));
+  } catch(err){ toast('Analysis failed — try again'); console.error(err); }
+  finally{ document.getElementById('ats-loading').classList.remove('show'); }
 }
 
 function renderATS(r) {
-  const score = Math.round(Math.min(100, Math.max(0, r.score)));
-  document.getElementById('ats-score').textContent = score;
-  const ring = document.getElementById('ats-ring');
-  ring.style.strokeDashoffset = 251 - (score/100)*251;
-  ring.style.stroke = score>=70 ? '#007A4D' : score>=45 ? '#FFB612' : '#DE3831';
-  const gp = document.getElementById('ats-grade');
-  gp.textContent = r.grade || 'Fair';
-  gp.className = 'pill ' + (score>=70?'p-g':score>=45?'p-y':'p-r');
-  document.getElementById('ats-summary').textContent = r.summary || '';
-  const fl = document.getElementById('kw-found'); fl.innerHTML='';
+  const score=Math.round(Math.min(100,Math.max(0,r.score)));
+  document.getElementById('ats-score').textContent=score;
+  const ring=document.getElementById('ats-ring');
+  ring.style.strokeDashoffset=251-(score/100)*251;
+  ring.style.stroke=score>=70?'#007A4D':score>=45?'#FFB612':'#DE3831';
+  const gp=document.getElementById('ats-grade');
+  gp.textContent=r.grade||'Fair';
+  gp.className='pill '+(score>=70?'p-g':score>=45?'p-y':'p-r');
+  document.getElementById('ats-summary').textContent=r.summary||'';
+  const fl=document.getElementById('kw-found');fl.innerHTML='';
   (r.keywords_found||[]).forEach(k=>{const s=document.createElement('span');s.className='kw kw-f';s.textContent=k;fl.appendChild(s);});
   document.getElementById('kw-found-count').textContent=(r.keywords_found||[]).length;
-  const ml = document.getElementById('kw-miss'); ml.innerHTML='';
+  const ml=document.getElementById('kw-miss');ml.innerHTML='';
   (r.keywords_missing||[]).forEach(k=>{const s=document.createElement('span');s.className='kw kw-m';s.textContent=k;ml.appendChild(s);});
   document.getElementById('kw-miss-count').textContent=(r.keywords_missing||[]).length;
-  const sl = document.getElementById('ats-sug'); sl.innerHTML='';
+  const sl=document.getElementById('ats-sug');sl.innerHTML='';
   (r.suggestions||[]).forEach(sg=>{const d=document.createElement('div');d.className='sug';d.innerHTML='<span>✦</span><span>'+sg.text+'</span>';sl.appendChild(d);});
-  document.getElementById('ats-results').style.display = 'block';
+  document.getElementById('ats-results').style.display='block';
   toast('Analysis complete');
 }
 
-function clearATS() {
-  document.getElementById('ats-jd').value='';
-  document.getElementById('ats-cv').value='';
-  document.getElementById('ats-results').style.display='none';
-}
-
-/* ── DOCUMENTS ── */
-function handleUpload(input) {
-  const files = Array.from(input.files);
-  files.forEach(f => {
-    if (st.files.find(x=>x.name===f.name)) return;
-    st.files.push(f);
-    addFileItem(f);
-    updateChecklist(f.name);
-  });
-  document.getElementById('upload-count').textContent = st.files.length + ' file' + (st.files.length!==1?'s':'');
-  updateMergeList();
-  toast(files.length + ' file' + (files.length>1?'s':'') + ' added');
-}
-
-function addFileItem(f) {
-  const list = document.getElementById('file-list');
-  const d = document.createElement('div');
-  d.className = 'fitem';
-  d.id = 'fi-' + f.name.replace(/[^a-z0-9]/gi,'_');
-  d.innerHTML = `<span>📄 ${f.name}</span><button class="fitem-x" onclick="removeFile('${f.name}')">✕</button>`;
-  list.appendChild(d);
-}
-
-function removeFile(name) {
-  st.files = st.files.filter(f=>f.name!==name);
-  const el = document.getElementById('fi-'+name.replace(/[^a-z0-9]/gi,'_'));
-  if (el) el.remove();
-  document.getElementById('upload-count').textContent = st.files.length + ' file' + (st.files.length!==1?'s':'');
-  updateMergeList();
-  updateChecklist();
-  toast('File removed');
-}
-
-function updateMergeList() {
-  const container = document.getElementById('merge-file-select');
-  const btn = document.getElementById('btn-merge');
-  container.innerHTML = '';
-  st.files.forEach((f,i) => {
-    const row = document.createElement('label');
-    row.style.cssText = 'display:flex;align-items:center;gap:8px;padding:8px 10px;background:#F5F5F5;border-radius:6px;font-size:12px;cursor:pointer;';
-    row.innerHTML = `<input type="checkbox" checked style="accent-color:#007A4D;"> <span>📄 ${f.name}</span>`;
-    container.appendChild(row);
-  });
-  btn.disabled = st.files.length < 2;
-}
-
-function mergeDocuments() {
-  const checked = Array.from(document.getElementById('merge-file-select').querySelectorAll('input[type=checkbox]:checked'));
-  if (checked.length < 2) return toast('Select at least 2 documents to merge');
-  const names = checked.map(cb => cb.closest('label').querySelector('span').textContent.replace('📄 ',''));
-  const result = document.getElementById('merge-result');
-  result.className = 'merge-result show';
-  result.innerHTML = `✓ <strong>Merge ready</strong> — ${names.length} documents selected: ${names.join(', ')}.<br><br>
-    <em>Note: Full PDF merging requires the backend to be running. Connect your Express server to process the merge and download.</em><br><br>
-    <button onclick="downloadMergeJSON(${JSON.stringify(names)})" style="padding:7px 14px;background:#007A4D;color:#fff;border:none;border-radius:6px;font-family:Inter,sans-serif;font-size:12px;font-weight:600;cursor:pointer;">Download merge manifest (JSON)</button>`;
-  toast('Documents queued for merge');
-}
-
-function downloadMergeJSON(names) {
-  const data = { files: names, mergedAt: new Date().toISOString(), owner: 'Lofty Investments', build: 'LI-CF-139D867C98194993' };
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));
-  a.download = 'certiflow-merge-manifest.json';
-  a.click();
-  toast('Merge manifest downloaded');
-}
-
-function updateChecklist(filename) {
-  const map = { id:['id','passport','identity'], cv:['cv','resume','curriculum'], qual:['qualif','matric','certif','degree','diploma'], ref:['ref','recommend','letter'] };
-  let done = 0;
-  Object.entries(map).forEach(([key, kws]) => {
-    const matched = st.files.some(f => kws.some(k => f.name.toLowerCase().includes(k)));
-    const pill  = document.getElementById('dsp-'+key);
-    const status= document.getElementById('dss-'+key);
-    const item  = document.getElementById('dsi-'+key);
-    if (matched) {
-      pill.textContent='Uploaded'; pill.className='pill p-g';
-      status.textContent='Ready for submission';
-      item.style.background='#E6F4EE';
-      done++;
-    } else {
-      pill.textContent='Pending'; pill.className='pill p-d';
-      status.textContent='Not uploaded';
-      item.style.background='#fff';
-    }
-  });
-  const cp = document.getElementById('doc-checklist-pill');
-  cp.textContent = done + ' / 4 verified';
-  cp.className = 'pill ' + (done===4?'p-g':done>0?'p-y':'p-d');
-}
+function clearATS(){document.getElementById('ats-jd').value='';document.getElementById('ats-cv').value='';document.getElementById('ats-results').style.display='none';}
 
 /* ── TOAST ── */
-function toast(msg) {
-  const el = document.getElementById('toast');
-  el.textContent = msg;
-  el.classList.add('show');
-  setTimeout(()=>el.classList.remove('show'), 3000);
-}
+function toast(msg){const el=document.getElementById('toast');el.textContent=msg;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),3000);}
 
-/* ── DRAG AND DROP ── */
-const dz = document.querySelector('.drop-zone');
-if (dz) {
-  dz.addEventListener('dragover', e=>{e.preventDefault();dz.style.borderColor='#007A4D';});
-  dz.addEventListener('dragleave', ()=>dz.style.borderColor='');
-  dz.addEventListener('drop', e=>{
-    e.preventDefault(); dz.style.borderColor='';
-    const dt = new DataTransfer();
-    Array.from(e.dataTransfer.files).forEach(f=>dt.items.add(f));
-    document.getElementById('file-input').files = dt.files;
-    handleUpload(document.getElementById('file-input'));
-  });
+/* ── DRAG DROP ── */
+const dz=document.querySelector('.drop-zone');
+if(dz){
+  dz.addEventListener('dragover',e=>{e.preventDefault();dz.style.borderColor='#007A4D';});
+  dz.addEventListener('dragleave',()=>dz.style.borderColor='');
+  dz.addEventListener('drop',e=>{e.preventDefault();dz.style.borderColor='';const dt=new DataTransfer();Array.from(e.dataTransfer.files).forEach(f=>dt.items.add(f));document.getElementById('file-input').files=dt.files;handleUpload(document.getElementById('file-input'));});
 }
 
 init();
