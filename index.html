@@ -1,7 +1,20 @@
 <!DOCTYPE html>
+
+<!-- ____________________________________________________________
+     Certiflow — Proprietary Software
+     Copyright (c) 2025 Lofty Investments. All rights reserved.
+     Unauthorised copying, modification, distribution or use of
+     this software, via any medium, is strictly prohibited.
+     Build ID : LI-CF-139D867C98194993
+     Issued to : Lofty Investments
+     Product   : Certiflow v3.0
+     ____________________________________________________________ -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+  <meta name="application-name" content="Certiflow">
+  <meta name="copyright" content="Lofty Investments 2025">
+  <meta name="build-id" content="LI-CF-139D867C98194993">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Certiflow — Lofty Investments</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -22,8 +35,8 @@ nav{background:#fff;border-bottom:1px solid #E2E2E2;height:52px;display:flex;ali
 .btn-so{padding:5px 12px;border:1px solid #E2E2E2;border-radius:6px;background:#fff;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;cursor:pointer;}
 
 /* AUTH */
-#auth-page{min-height:calc(100vh - 56px);display:none;align-items:center;justify-content:center;background:#0A0A0A;}
-#auth-page.active{display:flex;}
+#auth-page{min-height:calc(100vh - 56px);display:none;align-items:center;justify-content:center;background:#0A0A0A;padding:1rem;}
+#auth-page.active{display:flex!important;}
 .page{display:none;}
 .page.active{display:block;}
 .auth-card{background:#fff;border-radius:16px;padding:2.5rem;width:100%;max-width:380px;box-shadow:0 8px 40px rgba(0,0,0,.25);}
@@ -165,6 +178,67 @@ textarea:focus{border-color:#007A4D;box-shadow:0 0 0 3px rgba(0,122,77,.1);}
 .home-card .hc-icon{font-size:28px;margin-bottom:8px;}
 .home-card h4{font-size:13px;font-weight:700;margin-bottom:4px;}
 .home-card p{font-size:12px;color:#767676;}
+
+/* ── MOBILE ── */
+@media(max-width:600px){
+  nav{padding:0 14px;}
+  .wm{font-size:16px;}
+  .nav-user{gap:8px;}
+  .nav-role{display:none;}
+
+  #auth-page{padding:1rem;align-items:flex-start;padding-top:2rem;}
+  .auth-card{padding:1.75rem 1.25rem;border-radius:12px;}
+  .auth-card h2{font-size:20px;}
+
+  .dash-top{padding:1rem;}
+  .dash-top h2{font-size:18px;}
+  .dash-nav{padding:0 1rem;-webkit-overflow-scrolling:touch;}
+  .dnav-btn{padding:10px 12px;font-size:12px;}
+  .dash-body{padding:1rem;}
+
+  .home-grid{grid-template-columns:1fr 1fr;gap:8px;}
+  .home-card{padding:1rem;}
+  .home-card .hc-icon{font-size:22px;}
+  .home-card h4{font-size:12px;}
+  .home-card p{font-size:11px;}
+
+  .two-col{grid-template-columns:1fr;}
+  .doc-status-grid{grid-template-columns:1fr;}
+  .id-breakdown{grid-template-columns:1fr 1fr;}
+
+  .card-head{padding:10px 12px;flex-wrap:wrap;gap:6px;}
+  .card-body{padding:12px;}
+
+  .id-input-wrap{flex-direction:column;}
+  .id-input-wrap input,.id-input-wrap .btn-green{width:100%;}
+
+  textarea{font-size:14px;}
+
+  .btn-google{font-size:13px;padding:10px;}
+  .btn-main{font-size:14px;}
+
+  .ring-wrap{width:80px;height:80px;}
+  .ring-score .big{font-size:20px;}
+
+  .bundle-card{padding:12px;}
+  .sign-area canvas{width:100%;height:100px;}
+
+  .drop-zone{padding:1.25rem;}
+  .drop-zone .dz-icon{font-size:24px;}
+  .drop-zone p{font-size:12px;}
+
+  .fitem{font-size:11px;}
+  .cert-wording{font-size:11px;}
+  .ai-summary{font-size:11px;}
+
+  .toast{width:90%;text-align:center;white-space:normal;}
+}
+
+@media(max-width:380px){
+  .home-grid{grid-template-columns:1fr;}
+  .auth-card{padding:1.5rem 1rem;}
+}
+
 </style>
 </head>
 <body>
@@ -858,6 +932,72 @@ if(dz){
   dz.addEventListener('dragleave',()=>dz.style.borderColor='');
   dz.addEventListener('drop',e=>{e.preventDefault();dz.style.borderColor='';const dt=new DataTransfer();Array.from(e.dataTransfer.files).forEach(f=>dt.items.add(f));document.getElementById('file-input').files=dt.files;handleUpload(document.getElementById('file-input'));});
 }
+
+
+  /* __ IP LAYER 1: frozen window token __ */
+  (function(){
+    try{
+      const _li=Object.freeze({
+        _0x4c49:'TG9mdHkgSW52ZXN0bWVudHM=',
+        _0x4346:'Q2VydGlmbG93',
+        _0x4c49cf:'LI-CF-139D867C98194993',
+        _0x7961:'7a08adfde27fc7417ae3452b36f008a71dbb3a184da413c8c68ffe7411d4ed33',
+        _verify:function(){return btoa('Lofty Investments|Certiflow|LI-CF-139D867C98194993|2025')==='TG9mdHkgSW52ZXN0bWVudHN8Q2VydGlmbG93fExJLUNGLTEzOUQ4NjdDOTgxOTQ5OTN8MjAyNQ==';}
+      });
+      Object.defineProperty(window,'__certiflow__',{get:()=>_li,configurable:false,enumerable:false});
+    }catch(e){}
+  })();
+
+  /* __ IP LAYER 2: DOM ghost meta tag __ */
+  (function(){
+    try{
+      const _g=document.createElement('meta');
+      _g.setAttribute('name','x-owner');
+      _g.setAttribute('content','TG9mdHkgSW52ZXN0bWVudHN8Q2VydGlmbG93fExJLUNGLTEzOUQ4NjdDOTgxOTQ5OTN8MjAyNQ==');
+      _g.setAttribute('data-integrity','7a08adfde27fc7417ae3452b36f008a71dbb3a184da413c8c68ffe7411d4ed33');
+      document.head.appendChild(_g);
+    }catch(e){}
+  })();
+
+  /* __ IP LAYER 3: CSS custom property watermark __ */
+  (function(){
+    try{
+      document.documentElement.style.setProperty('--x-build','"LI-CF-139D867C98194993"');
+      document.documentElement.style.setProperty('--x-owner','"Lofty-Investments"');
+    }catch(e){}
+  })();
+
+  /* __ IP LAYER 4: invisible comment node __ */
+  (function(){
+    try{
+      const _n=document.createComment(' © 2025 Lofty Investments | Certiflow v3 | LI-CF-139D867C98194993 | 7a08adfde27fc7417ae3452b36f008a71dbb3a184da413c8c68ffe7411d4ed33 ');
+      document.body.insertBefore(_n,document.body.firstChild);
+    }catch(e){}
+  })();
+
+  /* __ IP LAYER 5: integrity self-check __ */
+  (function(){
+    try{
+      const _expected='TG9mdHkgSW52ZXN0bWVudHN8Q2VydGlmbG93fExJLUNGLTEzOUQ4NjdDOTgxOTQ5OTN8MjAyNQ==';
+      const _actual=btoa('Lofty Investments|Certiflow|LI-CF-139D867C98194993|2025');
+      if(_actual!==_expected){
+        const _w=document.createElement('meta');
+        _w.setAttribute('name','x-integrity-fail');
+        _w.setAttribute('content',_actual);
+        document.head.appendChild(_w);
+      }
+    }catch(e){}
+  })();
+
+  /* __ IP LAYER 6: console fingerprint __ */
+  (function(){
+    try{
+      if(typeof console!=='undefined'&&console.info){
+        console.info('%cCertiflow v3 — Lofty Investments','color:#007A4D;font-weight:800;font-size:13px');
+        console.info('%cProprietary software. Build: LI-CF-139D867C98194993','color:#767676;font-size:11px');
+      }
+    }catch(e){}
+  })();
 
 init();
 </script>
